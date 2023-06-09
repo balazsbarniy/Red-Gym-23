@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*      navbar        */
+
+.navbar {
+  background-color: #333;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu-icon {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#navbar-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  #navbar-toggle:checked ~ .menu {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 20px;
+  }
+
+  #navbar-toggle:checked ~ .menu a {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  #navbar-toggle:checked ~ .menu-icon .hamburger:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  #navbar-toggle:checked ~ .menu-icon .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+
+  #navbar-toggle:checked ~ .menu-icon .hamburger:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+/*   Logo   */
+
+.logo {
+  font-style: oblique;
+  font-size: 1cm;
+  color: red;
+  text-shadow: 4px 4px 6px black;
+  background-color: #333;
+}
+
+/* Home background */
+
+.index-background {
+  background-image: url("/images/background-index.webp");
+  background-color: #555;
+  width: 100%;
+  height: 100vh;
+  max-height: 200vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.window {
+  text-align: left;
+  padding-top: 2cm;
+  padding-left: 2cm;
+  padding-right: 1cm;
+  color: rgb(238, 138, 8);
+  font-size: 0.8cm;
+  text-shadow: 4px 4px 8px rgb(0, 0, 0);
+}
+.window {
+  background-color: #4b4a4a9d;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 850px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+/* membership */
+.membership-info {
+  background-image: url("/images/class-background.webp");
+  background-color: #555;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.info {
+  font-size: 1cm;
+  text-shadow: 4px 4px 6px black;
+  text-align: left;
+  padding-top: 2cm;
+  padding-left: 2cm;
+  padding-right: 1cm;
+}
+.bronze {
+  color: burlywood;
+}
+.silver {
+  color: cornsilk;
+}
+.gold {
+  color: gold;
+}
+.small-text {
+  font-size: smaller;
+}
+
+/* Personal Trainer */
+
+.grid {
+  background-image: url("/images/class-background.webp");
+  background-color: #555;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.trainer {
+  background-color: rgba(255, 228, 196, 0.116);
+  padding: 20px;
+  text-align: center;
+}
+
+.trainer img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.contact {
+  text-align: center;
+  padding: 20px;
+}
+
+.intro,
+.name-text,
+.contact {
+  font-style: oblique;
+  font-size: normal;
+  color: rgb(255, 217, 0);
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+/* Feedback */
+
+.form-background {
+  background-image: url("/images/Join-us.webp");
+  background-color: #333;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.feedback-section {
+  background-color: #c7c7c7;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.feedback-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feedback-section p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.feedback-section form {
+  text-align: center;
+}
+
+.feedback-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  resize: vertical;
+}
+
+.feedback-section .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #555;
+  color: #d3d3d3;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-section .btn:hover {
+  background-color: #333;
+}
+
+/* thanks    */
+
+.thank-you {
+  background-image: url("/images/background-index.webp");
+  background-color: #333;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.thank-you {
+  text-align: center;
+  padding-top: 20%;
+  font-size: 0.8cm;
+  color: chocolate;
+}
+.button {
+  color: red;
+}
